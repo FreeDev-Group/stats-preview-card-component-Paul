@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root{
+--Navy: hsl(233, 47%, 7%);
+--Blue: hsl(244, 37%, 16%);
+--Purple: hsl(277, 64%, 61%);
+--Whiteheadings: hsl(0, 0%, 100%);
+--Whiteparagraph: hsla(0, 0%, 100%, 0.75);
+--Whitestat: hsla(0, 0%, 100%, 0.6);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    padding: 20px;
+    font-size: 15px;
+    background: var(--Navy);
+    width: 100%;
+    min-height: 100vh;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 7px;
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    padding: 60px;
+    background: var(--Blue);
+}
+
+.left h1{
+    color: var(--Whiteheadings);
+    font-weight: 700;
+}
+
+.left h1 strong{
+    color: var(--Purple);
+}
+
+.left p{
+    color: var(--Whiteparagraph);
+    line-height: 1.5rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+} 
+
+.list-stat{
+    color: var(--Whiteheadings);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.list-content{
+    color: var(--Whitestat);
+    font-family: "Lexend Deca", sans-serif;
+    text-transform: uppercase;
+}
+
+.right{
+    width: 100%;
+    background-size: cover;
+    background-image: linear-gradient(rgba(170, 9, 251, 0.3), rgba(170, 9, 251, 0.3)), url(./images/image-header-desktop.jpg);
+}
+
+.attribution { 
+    font-size: 0.7rem; 
+    text-align: center;
+    color: var(--Whiteheadings); 
+    margin-top: 30px;
+    }
+
+.attribution a { 
+    color:var(--Purple)
+}
+
+@media (max-width: 768px) {
+
+    .card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .right {
+        order: -1;
+        height: 250px;
+        background-image: 
+            linear-gradient(rgba(170, 9, 251, 0.4), rgba(170, 9, 251, 0.4)),
+            url('./images/image-header-mobile.jpg');
+    }
+
+    .left {
+        padding: 40px 30px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+
